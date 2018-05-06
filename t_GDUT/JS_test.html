@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>notitle</title>
+	<style type="text/css">
+		#div3{
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+		#d1{
+			width: 400px;
+			height: 400px;
+			margin: 0px auto;
+			border:1px solid black;
+		}
+		#d2{
+			width: 250px;
+			height: 250px;
+			border:1px solid red;
+		}
+		#d22{
+			width: 250px;
+			height: 120px;
+			border:1px solid red;
+		}
+		#d3{
+			width: 150px; 
+			height: 150px; 
+			left: 200px;
+			border:1px solid blue;
+			position: absolute;
+		}
+		#d1>div{
+			background: red;
+		}
+	</style>
+	<style>
+*{margin:0;padding: 0;list-style: none;text-decoration: none;}
+#nav{width: 500px;height: 40px;background: #ccc;margin: 0 auto;}
+ul{background: #aaa}
+ul li{float:left; display:block; height: 40px; line-height: 40px; padding: 0 20px; position: relative;}
+ul li:hover{background: #cea;}
+ul li ul li{float: none;}
+ul li ul{position: absolute;top:40px;left: 0; display:none;}
+ul li ul li:hover{background: red;}
+</style>
+
+	<!-- <style>
+*{margin:0;padding: 0;list-style: none;text-decoration: none;}
+#nav{width: 500px;height: 40px;background: #ccc;margin: 0 auto;}
+ul{background: #aaa}
+ul li{float:left; display:block; height: 40px; line-height: 40px; padding: 0 20px; position: relative;}
+ul li:hover{background: #cea;}
+ul li ul li{float: none;}
+/*关键一：将二级菜单设置为display：none;*/
+ul li ul{position: absolute;top:40px;left: 0; display: none;}
+ul li ul li:hover{background: red;}
+/*关键二：在划过二级菜单从属的一级菜单时，设置为display:block;*/
+ul li:hover ul{display: block;}
+</style> -->
+
+</head>
+<body>
+	<div id="div1" class="dv">
+		123456789
+	</div>
+	<div class="dv">
+		987654321
+	</div>
+	<div id="div3">
+		
+	</div>
+
+	<div id="d1">
+		<a href="#">111</a>
+		<div id="d2">
+			<div id="d3">
+				
+			</div>
+		</div>
+		<div id="d22">
+			
+		</div>
+	</div>
+	<script type="text/javascript">
+		var odiv1 = document.getElementById('div1');
+		console.log(odiv1.innerText);
+		var odiv2 = document.getElementsByTagName('div')[0];
+		console.log(odiv2.innerText);
+		var odiv3 = document.getElementsByClassName('dv');
+		console.log(odiv3[1].innerText);
+
+		var div3 = document.getElementById('div3');
+		clearInterval(div3.timer);
+		div3.tiemr = setInterval(function () {
+			div3.style.width = "200px";
+		},1000);
+		div3.onmouseover = function () {
+			clearInterval(div3.timer);
+			console.log("清楚定时器");
+		}
+
+		var d1 = document.getElementById('d1');
+		var oa = d1.children[0].nodeName;
+		console.log(oa);
+	</script>
+	<script type="text/javascript">
+		var a = "b";
+		var c ="3";
+		switch(c){
+			case "b":console.log("1");
+			case "a":console.log(2);
+			case "c":console.log(3);
+			case "":console.log(4);
+			break;
+		}
+	</script>
+
+	<!-- <div id="nav">
+	<ul>
+		<li><a href="">首页</a></li>
+		<li><a href="">汽车</a>
+			<ul>
+			<li><a href="#">奥迪</a> </li>
+			<li><a href="#">道奇</a> </li>
+			</ul>
+		</li>
+		<li><a href="">手机</a>
+			<ul>
+			<li><a href="#">小米</a> </li>
+			<li><a href="#">华为</a> </li>
+			</ul>
+		</li>
+		<li><a href="">联系我们</a></li>
+	</ul>
+	</div> -->
+	<div id="nav">
+<ul>
+<li><a href="#">首页</a></li>
+<li onmouseover="show(this)" onmouseout="hide(this)"><a href="#">汽车</a>
+<!-- 关键一：在二级标题从属的一级标题标签内设置时间执行程序，this代表的时这个li元素 -->
+<ul>
+<li><a href="#">奥迪</a> </li>
+<li><a href="#">道奇</a> </li>
+</ul>
+</li>
+<li onmouseover="show(this)" onmouseout="hide(this)"><a href="#">手机</a>
+<ul>
+<li><a href="#">小米</a> </li>
+<li><a href="#">华为</a> </li>
+</ul>
+</li>
+<li><a href="#">联系我们</a></li>
+</ul>
+</div> 
+<script>
+function show(li){
+var ul=li.getElementsByTagName("ul")[0];
+// 关建二：在li这个对象内查询标签名为ul的标签，由于二级标签只有一个，所以索引为0即可。
+ul.style.display="block";
+// 关键三：当鼠标划过li时，其子元素ul标签的display为block
+}
+function hide(li){
+var ul=li.getElementsByTagName("ul")[0];
+ul.style.display="none";
+// 关键四：当鼠标划出li时，其子元素ul的display为none
+}
+</script>
+
+
+</body>
+</html>

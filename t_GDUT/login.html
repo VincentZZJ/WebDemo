@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>广东业大学教学管理系统</title>
+	<link rel="shortcut icon" href="./images/icon.png">
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<style type="text/css">
+		body{
+			background: #f9f9f9;
+		}
+		#box{
+			width: 600px;
+			height: 460px;
+			padding: 30px;
+			margin: 80px auto;
+			/*border: 1px solid gray;*/
+		}
+		#box img{
+			margin-left: 160px;
+			margin-bottom: 40px;
+		}
+		#box input{
+			width: 360px;
+			height: 42px;
+			padding: 2px 32px;
+			border: 1px solid #AAA;
+			font-size: 16px;
+			line-height: 42px;
+			margin: 2px 150px 20px 80px;
+		}
+		#box input[name="username"]{
+			background: url("./images/username.png") no-repeat left center #fff;
+		}
+		#box input[name="password"]{
+			background: url("./images/password.png") no-repeat left center #fff;
+		}
+		#box input[name="code"]{
+			background: url("./images/code.png") no-repeat left center #fff;
+		}
+		#box p{
+			margin: -10px 0px 10px 0px;
+			padding-left: 80px;
+		}
+		#box p a{
+			color:#2299ee;
+			font-size: 14px;
+			line-height: 30px;
+		}
+		#box p span{
+			margin-left: 230px;
+		}
+		#box button{
+			width: 426px;
+			height: 44px;
+			padding: 2px 32px;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 44px;
+			margin: 0px 150px 0px 80px;
+			color: #fff;
+			background: #CCC;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<img src="./images/GDUT_logo_1.png"/>
+		<form>
+			<input type="text" name="username" placeholder="请输入学号或工号">
+			<input type="password" name="password" placeholder="请输入密码">
+			<input type="text" name="code" placeholder="请输入验证码">
+			<p><a href="#">使用统一认证中心登录</a><span><a href="#">忘记密码</a></span></p>
+			<button type="submit">登&nbsp&nbsp录</button>
+		</form>
+	</div>
+</body>
+</html>

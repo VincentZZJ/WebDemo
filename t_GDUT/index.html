@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>教学管理系统</title>
+	<link rel="shortcut icon" href="./images/icon.png">
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<!-- JS的引入 -->
+	<script src="./js/index.js"></script>
+	<script type="text/javascript">
+		// window.onload = function () {
+		// 	// 顶部动画
+		// 	// header();
+			
+		// }
+
+	</script>
+</head>
+<body>
+	<!-- 页面顶部设计 -->
+	<header id="header">
+		<!-- 顶部左侧区域 -->
+		<div id="h_left">
+			<img src="./images/GDUT_logo_2.gif">
+			<ul>
+				<li><label>钟志杰</label>|<a href="#">体验新版</a></li>
+				<li><a href="#">修改密码</a>|<a href="#">设置</a>|<a href="#">锁定</a>|<a href="#">注销</a></li>
+			</ul>
+		</div>
+		<!-- 右侧区域 -->
+		<div id="h_right">
+			<p class="h_time"><label>登录时间：</label><time>2018-04-28 18:31:05</time></p>
+			<nav class="h_nav">
+				<ul class="h_ul" id="h_nav">
+					<li>
+						<a href="#">选课报名  </a><span>|</span>
+						<!-- 待扩展 -->
+						<ul class="ul1 hide" id="s_courses">
+							<li class="li1">
+								<a href="#">选课报名</a>
+								<ul class="ul2 hide">
+									<li><a href="#">个人选课</a></li>
+									<li><a href="#">重修补课</a></li>
+									<li><a href="#">重修查询</a></li>
+									<li><a href="#">选修查询</a></li>
+									<li><a href="#">考试报名</a></li>
+								</ul>
+							</li>
+							<li class="li1">
+								<a href="#">学生评教</a>
+								<ul class="ul2 hide">
+									<li><a href="#">老师评教</a></li>
+									<li><a href="#">课程评教</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">业务办理 </a> <span>|</span>
+						<!-- 待扩展 -->
+						<ul class="ul1 hide">
+							<li class="li1">
+								<a href="#">业务办理</a>
+								<ul class="ul2 hide">
+									<li><a href="#">缓考申请</a></li>
+									<li><a href="#">重修申请</a></li>
+									<li><a href="#">退学申请</a></li>
+									<li><a href="#">休学申请</a></li>
+									<li><a href="#">贫困申请</a></li>
+								</ul>
+							</li>
+							<li class="li1">
+								<a href="#">创新项目</a>
+								<ul class="ul2 hide">
+									<li><a href="#">项目立项</a></li>
+									<li><a href="#">课题成果</a></li>
+									<li><a href="#">个人报销申请</a></li>
+									<li><a href="#">课题结题申请</a></li>
+								</ul>
+							</li>
+							<li class="li1">
+								<a href="#">学籍变动</a>
+								<ul class="ul2 hide">
+									<li><a href="#">信息变动申请</a></li>
+									<li><a href="#">学籍变动申请</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">信息查询 </a> <span>|</span>
+						<!-- 待扩展 -->
+						<ul class="ul1 hide">
+							<li class="li1">
+								<a href="#">信息查询</a>
+								<ul class="ul2 hide">
+									<li><a href="#">学籍卡片</a></li>
+									<li><a href="#">学习计划</a></li>
+									<li><a href="#">课表查询</a></li>
+									<li><a href="#">班级课表</a></li>
+									<li><a href="#">考级成绩</a></li>
+									<li><a href="#">学籍预警</a></li>
+									<li><a href="#">课程成绩</a></li>
+									<li><a href="#">培养方案查询</a></li>
+									<li><a href="#">考试安排</a></li>
+									<li><a href="#">操作日志</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li id="mr_search">
+						<input type="text" name="search" list="optionlist">
+						<datalist id="optionlist">
+							<option>重修申请</option>
+							<option>退学申请</option>	
+							<option>休学申请</option>						
+							<option>项目立项</option>						
+							<option>课题成果</option>						
+							<option>学籍卡片</option>						
+							<option>学习计划</option>						
+							<option>课表查询</option>						
+							<option>班级课表</option>						
+							<option>考级成绩</option>						
+							<option>学籍预警</option>						
+							<option>课程成绩</option>						
+							<option>考试安排</option>						
+							<option>操作日志</option>						
+						</datalist>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- 页面中部设计 -->
+	<div id="main">
+		<!-- 左侧导航栏 -->
+		<div id="m_left">
+			<h3>教务管理系统<a href="#" id="side_left"></a></h3>
+			<nav>
+				<ul id="m_list">
+					<li>
+						<a href="#">选课报名</a>
+						<ul class="l_ul2">
+							<li><a href="#">个人选课</a></li>
+							<li><a href="#">补重修报名</a></li>
+							<li><a href="#">毕业选题</a></li>
+							<li><a href="#">考级报名</a></li>
+							<li><a href="#">考试报名</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">学生评教</a>
+						<ul class="l_ul2">
+							<li><a href="#">教师评教</a></li>
+							<li><a href="#">其他问卷</a></li>
+							<li><a href="#">课堂评教</a></li>
+							<li><a href="#">课程评教</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="sideleft" id="side_right"><a href="#"></a></div>
+		<!-- 右侧主显示窗口 -->
+		<div id="m_right">
+			<!-- 顶部导航标签 -->
+			<nav>
+				<ul id="mr_list">
+					<li>我的桌面<span></span></li>
+					<li>选课报名<span><a href="#">×</a></span></li>
+				</ul>
+				<div id="mr_option">
+					<a href="#"><img src="./images/del.png"></a>|<a href="#"><img src="./images/max.png"></a>
+				</div>
+			</nav>
+			<!-- 顶部导航下的初始化界面 -->
+			<div id="content">
+				<div id="c_intial">
+					<h1>公告通知</h1>
+					<h3><a href="#">成绩录入流程(含打印成绩单)</a></h3>
+					<p>&nbsp&nbsp成绩录入流程 一、选择“成绩录入”，首先设置每门课程的“成绩比例”，然后点击录成绩的操作。 二、设置成绩比例界面：勾选需要设置的项目（如平时成绩），<br/>写上比例（比例总和要...<br/>
+					<span>【<label>发布时间：</label><time>2017-11-14</time>】</span>
+					</p>
+					<aside>
+						<ul>
+							<li><img src="./images/aside_li0.png"><a href="#">消息通知</a></li>
+							<li><img src="./images/aside_li1.png"><a href="#">微信平台</a></li>
+							<li><img src="./images/aside_li2.png"><a href="#">学习情况</a></li>
+							<li><img src="./images/aside_li3.png"><a href="#">在线咨询</a></li>
+							<li><img src="./images/aside_li4.png"><a href="#">文档下载</a></li>
+						</ul>
+					</aside>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
