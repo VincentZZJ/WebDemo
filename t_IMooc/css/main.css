@@ -1,0 +1,218 @@
+/*设置body的背景*/
+body{
+	background-color: #F5F5F5;
+}
+/*页面顶部样式*/
+#head{
+	width: 100%;
+	height: 27px;
+	background: url("../images/top_bg.jpg") repeat-x; 
+}
+#head nav{
+	width: 1000px;
+	height: 27px;
+	margin: 0px auto;
+}
+#head nav a{
+	background: url("../images/arrow.jpg") no-repeat;
+	background-position: left center;
+	line-height: 27px;
+	height: 27px;
+	width: 70px;
+	float: right;
+	color: #8e8e8e;
+	padding-left: 10px;
+}
+#head nav a:link,#head nav a:visited{
+	color: #8e8e8e;
+}
+#head nav a:hover,#head nav a:active{
+	color: #c00;
+}
+/*主体页面的基本样式*/
+#wrap{
+	width: 1000px;
+	margin: 0px auto;
+}
+/*主体页面上部的logo区样式设置*/
+#logo{
+	height: 80px;
+	background: url(../images/logo.jpg) no-repeat;
+	background-position: left center;
+	background-color: #fff;
+}
+#logo_tel{
+	width: 300px;
+	height: 80px;
+	line-height: 80px;
+	background: url(../images/tel.jpg) no-repeat;
+	background-position: left center;
+	padding-left: 30px;
+	float: right;
+	font-size: 16px;
+	color: #8e8e8e;
+}
+#logo_tel span{
+	font-size: 20px;
+	color: #c00;
+}
+/*主体页面上导航栏部分的样式设置*/
+#nav_menu{
+	height: 40px;
+	position: relative;
+	background: url("../images/nav_left.jpg") 0 0 no-repeat,
+				url("../images/nav_bg.jpg") 0 0 repeat-x,
+				url("../images/nav_right.jpg") 0 0 no-repeat;
+	/*background-repeat: no-repeat,repeat-x,no-repeat;*/
+	/*background-position: center left,left center,center right;*/
+}
+#nav_menu nav a{
+	line-height: 40px;
+	font-size: 16px;
+	color: #fcfcfc;
+	margin-left: 50px;
+}
+#nav_menu input{
+	background: url("../images/search.jpg") no-repeat right;
+	background-color: #fff;
+	border: none;
+	width: 180px;
+	height: 22px;
+	position: absolute;
+	right: 50px;
+	top: 8px;
+	padding-right:25px; 
+}
+/*主体页面上ad区的样式设置*/
+#ad{
+	height: 320px;
+	margin-top: 5px;
+	overflow-y: hidden;
+}
+/*主体页面上main区的样式设置*/
+#main{
+	background: #fff;
+	margin-top: 5px;
+	overflow: hidden;
+}
+/*区域main中新闻中心的样式设置*/
+#news{
+	width: 340px;
+	float: left;
+	line-height: 22px;
+	border: 1px solid #e8e8e8;
+}
+.title{
+	height: 35px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	color: #786f66;
+	position: relative;
+	background: url("../images/titile_bg.gif");
+	margin-bottom: 5px;
+}
+.title h2{
+	margin-left: 30px;
+	font-size: 14px;
+	line-height: 35px;
+}
+.title span{
+	position: absolute;
+	line-height: 35px;
+	top: 0px;
+	right: 20px;
+}
+/*#news h3{
+	font-size: 12px;
+	color: #c00;
+}
+#news span {
+
+}
+#news p img{
+	float: left;
+	margin-right: 8px;
+}*/
+.content img{
+	float: left;
+	margin-right: 8px;
+}
+.content h3 a,.content p a{
+	color: #c00;
+}
+.content ul{
+	margin-top: 5px;
+}
+.content li{
+	background: url("../images/list.jpg") no-repeat left top;
+	border-bottom: 1px dotted #ccc;
+	padding-left: 5px;
+	margin: 2px 0px;
+	/*color: #000;*/			/*浏览器本身对a标签有默认样式，故父类的样式不能直接继承*/
+}
+.content li a {
+	color: #000;
+}
+.content li a:hover,.content li a:visited{
+	color: #c00;
+}
+.content li span {
+	color: #999;
+	float: right;
+	margin-right: 5px;
+}
+/*课程中心的样式设置*/
+#courses{
+	width: 410px;
+	margin: 0px 7px;
+	float: left;
+	line-height: 22px;
+}
+.c_content img{
+	float: left;
+	margin-right: 5px;
+}
+.c_content h3 a {
+	color: #c00;
+}
+.c_content details{
+	margin-left: 5px; 
+}
+.c_content details ul li{
+	margin: 1px 8px;
+	padding-left: 10px; 
+	border-bottom: 1px dotted #8e8e8e;
+	background: url("../images/li_bg2.gif") no-repeat left center;
+}
+.c_content details a:link,.c_content details a:visited{
+	color: #8e8e8e;
+}
+.c_content details a:hover,.c_content details a:active{
+	color: #c00;
+}
+/*侧边广告栏设置样式*/
+#sidebar{
+	float: left;
+}
+/*网页脚部设置样式*/
+#footlist{
+	height: 180px;
+	padding-top: 10px;
+}
+#footlist ul>li{
+	width: 200px;
+	float: left;
+	font-size: 18px;
+	line-height: 30px;
+	color: #999;
+	text-align: center;
+	background: url("../images/line.png") no-repeat right center;
+}
+#footlist li ul li{
+	font-size: 14px;
+}
+#footlist li p{
+	margin-top: 10px;
+	background: url("../images/weixin.png") no-repeat;
+	background-position: 30px 0px;
+} 
