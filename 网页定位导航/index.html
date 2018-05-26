@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>网页导航Demo</title>
+	<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	li{
+		list-style: none;
+	}
+	a{
+		text-decoration: none;
+		color: #000;
+	}
+	#mainBox{
+		position: relative;
+		margin: 0px auto;
+	}
+	#content{
+		/*width: 870px;
+		padding: 15px;*/
+		width: 900px;
+		margin: 0px auto;
+		border:1px solid blue;
+	}
+	.item{
+		width: 870px;
+		padding: 15px;
+		border:1px dotted gray;
+		font-size: 0px;
+		margin-bottom: 10px;
+	}
+	.item h3{
+		font-size: 16px;
+		margin-bottom: 10px;
+		border-bottom: 1px solid gray;
+		padding-bottom: 5px;
+	}
+	.item li{
+		display: inline;
+		margin-right: 10px;
+	}
+	.item li img{
+		width: 280px;
+		height: 160px;
+		border:none;
+		vertical-align: middle;
+	}
+	#guide{
+		width: 80px;
+		position: fixed;
+		left: 50%;
+		top: 100px;
+		margin-left: 460px;
+	}
+	#guide li{
+		line-height: 30px;
+		font-size: 20px;
+		border-radius: 4px;
+		border:1px solid gray;
+		text-align: center;
+		margin-bottom: 2px;
+		background: rgba(10,10,10,0.2);
+		cursor: pointer;
+	}
+	#guide .active{
+		background: rgba(10,10,240,0.6);
+	}
+	</style>
+	<!-- 原生JS模板 -->
+	<!-- <script type="text/javascript" src="./useJS.js"></script> -->
+	<!-- 运用JQ框架模板 -->
+	<script type="text/javascript" src="jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			// 获取滚动条检测
+			$(window).scroll(function () {
+				// 获取下滑高度
+				var top = $(document).scrollTop();
+				// console.log(top);
+				// 获取导航栏元素
+				var oGuide = $("#guide");
+				var items = $("#content").find(".item");
+				
+				// 定义当前楼层
+				var currentFloor = "";
+				// 对内容块进行遍历
+				items.each(function () {
+					var _item = $(this);
+					var _itemTop = _item.offset().top;
+					if(top>_itemTop-160){
+						currentFloor = "#" + _item.attr('id');
+					}else{
+						return false;
+					}
+				});
+				// 获取当前导航位置
+				var currentLink = oGuide.find(".active");
+				// 对当前楼层进行判断
+				if(currentFloor && currentLink.attr('href')!=currentFloor){
+					currentLink.removeClass('active');
+					oGuide.find("[href='" + currentFloor + "']").parent().addClass('active');
+				}
+			});
+		})
+	</script>
+</head>
+<body>
+	<!-- 主盒子 -->
+	<div id="mainBox">
+		<!-- 导航条 -->
+		<nav id="guide">
+			<ul>
+				<li class="active"><a href="#div1">1F 一楼</a></li>
+				<li><a href="#div2">2F 二楼</a></li>
+				<li><a href="#div3">3F 三楼</a></li>
+				<li><a href="#div4">4F 四楼</a></li>
+				<li><a href="#div5">5F 五楼</a></li>
+			</ul>
+		</nav>
+		<!-- 内容块 -->
+		<div id="content">
+			<h2>网页定位导航</h2>
+			<div id="div1" class="item">
+				<h3>1F 一楼</h3>
+				<ul>
+					<li><a href="#"><img src="./images/1.png"></a></li>
+					<li><a href="#"><img src="./images/1.png"></a></li>
+					<li><a href="#"><img src="./images/1.png"></a></li>
+					<li><a href="#"><img src="./images/1.png"></a></li>
+					<li><a href="#"><img src="./images/1.png"></a></li>
+					<li><a href="#"><img src="./images/1.png"></a></li>
+					<li><a href="#"><img src="./images/1.png"></a></li>
+					<li><a href="#"><img src="./images/1.png"></a></li>
+					<li><a href="#"><img src="./images/1.png"></a></li>
+				</ul>
+			</div>	
+			<div id="div2" class="item">
+				<h3>2F 二楼</h3>
+				<ul>
+					<li><a href="#"><img src="./images/2.png"></a></li>
+					<li><a href="#"><img src="./images/2.png"></a></li>
+					<li><a href="#"><img src="./images/2.png"></a></li>
+					<li><a href="#"><img src="./images/2.png"></a></li>
+					<li><a href="#"><img src="./images/2.png"></a></li>
+					<li><a href="#"><img src="./images/2.png"></a></li>
+					<li><a href="#"><img src="./images/2.png"></a></li>
+					<li><a href="#"><img src="./images/2.png"></a></li>
+					<li><a href="#"><img src="./images/2.png"></a></li>
+				</ul>
+			</div>	
+			<div id="div3" class="item">
+				<h3>3F 三楼</h3>
+				<ul>
+					<li><a href="#"><img src="./images/3.png"></a></li>
+					<li><a href="#"><img src="./images/3.png"></a></li>
+					<li><a href="#"><img src="./images/3.png"></a></li>
+					<li><a href="#"><img src="./images/3.png"></a></li>
+					<li><a href="#"><img src="./images/3.png"></a></li>
+					<li><a href="#"><img src="./images/3.png"></a></li>
+					<li><a href="#"><img src="./images/3.png"></a></li>
+					<li><a href="#"><img src="./images/3.png"></a></li>
+					<li><a href="#"><img src="./images/3.png"></a></li>
+				</ul>
+			</div>	
+			<div id="div4" class="item">
+				<h3>4F 四楼</h3>
+				<ul>
+					<li><a href="#"><img src="./images/4.png"></a></li>
+					<li><a href="#"><img src="./images/4.png"></a></li>
+					<li><a href="#"><img src="./images/4.png"></a></li>
+					<li><a href="#"><img src="./images/4.png"></a></li>
+					<li><a href="#"><img src="./images/4.png"></a></li>
+					<li><a href="#"><img src="./images/4.png"></a></li>
+					<li><a href="#"><img src="./images/4.png"></a></li>
+					<li><a href="#"><img src="./images/4.png"></a></li>
+					<li><a href="#"><img src="./images/4.png"></a></li>
+				</ul>
+			</div>	
+			<div id="div5" class="item">
+				<h3>5F 五楼</h3>
+				<ul>
+					<li><a href="#"><img src="./images/5.png"></a></li>
+					<li><a href="#"><img src="./images/5.png"></a></li>
+					<li><a href="#"><img src="./images/5.png"></a></li>
+					<li><a href="#"><img src="./images/5.png"></a></li>
+					<li><a href="#"><img src="./images/5.png"></a></li>
+					<li><a href="#"><img src="./images/5.png"></a></li>
+					<li><a href="#"><img src="./images/5.png"></a></li>
+					<li><a href="#"><img src="./images/5.png"></a></li>
+					<li><a href="#"><img src="./images/5.png"></a></li>
+				</ul>
+			</div>	
+
+		</div>
+	</div>
+</body>
+</html>
